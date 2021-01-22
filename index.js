@@ -218,8 +218,8 @@ Practice accessing data above by console.log-ing following items:
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 (no function needed) 
 There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
-artists[8]["name"] = "Vincent van Gough";
-console.log(artists);
+// artists[8]["name"] = "Vincent van Gogh";
+// console.log(artists);
 
 
 
@@ -236,7 +236,7 @@ console.log(artists);
   let id = index [1]
   return `the artist at index ${artists[index].id} is ${artists[index].name}`;
 }
-console.log(getArtistByIndex(artists, 3));
+// console.log(getArtistByIndex(artists, 3));
 
 
 
@@ -249,10 +249,18 @@ Example born in 1901 and died in 1959 - included -- born in 1889 and died in 192
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
 function get20s(artists){
-  const 20s = [];
+  const twenties = [];
   for (let i = 0; i < artists.length; i++){
-      if(artists[i][years].includes
+      let years = artists[i].years.split(" - ");
+    if (years[0] >= 1900 && years[0] < 2000 && years[1] >= 1900 && years[1] < 2000){
+        twenties.push(artists[i].name);
+    }
+  
+      
   }
+  return twenties;
+  }
+  // console.log(get20s(artists));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -264,10 +272,12 @@ function get20s(artists){
  
  For example, if removeArtist is invoked with the artists array and the number 0, it will remove Amedeo Modigliani from our dataset and return the number 19. */
 
-function removeArtist(/*Your Code Here*/){
-   /*Your Code Here*/
+ function removeArtist(array, index){
+  array.splice(index, 1);
+  return array.length;
+
 }
-   
+// console.log(removeArtist(artists, 4));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use addArtist to do the following: 
@@ -285,11 +295,20 @@ Use addArtist to do the following:
 
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
-function addArtist(id, name, years, genre, nationality, bio){
-  return {id, name, years, genre, nationality, bio};
+function addArtist(artists, object){
+  artists.push(object);
+  return artists;
+  
+  
 }
-  console.log(addArtist(20, 'Adam', 1990, 'Web Design', 'American', 'I <3 coding'));
-
+// console.log(addArtist(    { 
+//   id: 20,
+//   name: 'Adam', 
+//   years: '1990' - '2021',
+//   genre: 'Web Design',
+//   nationality: 'American',
+//   bio: 'I <3 coding',
+// }));
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -302,11 +321,14 @@ For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte
 function lotsOfArt(artists){
   let over100 = [];
   for (let i = 0; i < artists.length; i++) {
-    if (artists[i][paintings > 100])
+    if (artists[i].paintings > 100) {
+        over100.push(artists[i].name);
+    }
   }
+  
   return over100;
 }
-
+// console.log(lotsOfArt(artists));
 
 
 

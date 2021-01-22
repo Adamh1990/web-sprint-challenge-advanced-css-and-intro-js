@@ -24,7 +24,7 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. How would you describe acessibility on the web to someone new to programming?
 
-It means the content isn't limited to certain people with certain devices; you can access the web(page/site/etc) on cell phone or desktop -EASILY- alike.
+It means the content isn't limited to certain people with certain devices; you can access the web(page/site/etc) on cell phone or desktop -EASILY- alike. Including being able to access the web page on multiple devices like screenreaders
 
 2. Talk about 3 different things you can do to ensure your website is accessible.
 
