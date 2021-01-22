@@ -232,7 +232,7 @@ There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is current
  Example, if getArtistByIndex is invoked with the artists array and the number 0, it will return `the artist at index 0 is Amedeo Modigliani` */
 
  function getArtistByIndex(arr, index) {
-  let name = index[0];
+  let name = index[0]; 
   let id = index [1]
   return `the artist at index ${artists[index].id} is ${artists[index].name}`;
 }
@@ -249,11 +249,11 @@ Example born in 1901 and died in 1959 - included -- born in 1889 and died in 192
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
 function get20s(artists){
-  const twenties = [];
-  for (let i = 0; i < artists.length; i++){
-      let years = artists[i].years.split(" - ");
-    if (years[0] >= 1900 && years[0] < 2000 && years[1] >= 1900 && years[1] < 2000){
-        twenties.push(artists[i].name);
+  const twenties = []; //new empty array
+  for (let i = 0; i < artists.length; i++){ //iterate through everything 1-by-1
+      let years = artists[i].years.split(" - "); //seperate birth from death years
+    if (years[0] >= 1900 && years[0] < 2000 && years[1] >= 1900 && years[1] < 2000){ //conditions to be met while iterating through
+        twenties.push(artists[i].name); //if the indices match the set conditions, push them into new array
     }
   
       

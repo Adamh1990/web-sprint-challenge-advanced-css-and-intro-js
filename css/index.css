@@ -136,7 +136,10 @@ button:hover{
 .artist img{
     width:100%;
 }
-/*mobile styles*/
+
+
+/*mobile styles / MVPS from Adam*/
+
 @media only screen and (max-width: 500px) {
     html{
         font-size:50%;
