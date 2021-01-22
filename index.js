@@ -208,10 +208,10 @@ Practice accessing data above by console.log-ing following items:
 (no functions needed) */
 
 //(1) Name of the first artist (0th index) in the array
-console.log(artists[0].name);
+// console.log(artists[0].name);
 
 //(2) Bio of the third artist (2nd index) in the array
-console.log(artists[2].bio);
+// console.log(artists[2].bio);
 
 
 
@@ -231,13 +231,12 @@ console.log(artists);
  
  Example, if getArtistByIndex is invoked with the artists array and the number 0, it will return `the artist at index 0 is Amedeo Modigliani` */
 
-function getArtistByIndex(/*Your Code Here*/) {
-  function getArtistByIndex(arr, index) {
-    let name = index[0];
-    return `the artist at index 0 is ${artists[index].name}`;
-  }
-  console.log(getArtistByIndex(artists, 3));
-}  
+ function getArtistByIndex(arr, index) {
+  let name = index[0];
+  let id = index [1]
+  return `the artist at index ${artists[index].id} is ${artists[index].name}`;
+}
+console.log(getArtistByIndex(artists, 3));
 
 
 
@@ -249,14 +248,11 @@ Use get20s to do the following:
 Example born in 1901 and died in 1959 - included -- born in 1889 and died in 1925 not included
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
-function get20s(array, string){
-  const results = [];
-  for (let i = 0; i < array.length; i++) {
-    if(array[i].includes(string))
+function get20s(artists){
+  const 20s = [];
+  for (let i = 0; i < artists.length; i++){
+      if(artists[i][years].includes
   }
-  /*Your Code Here*/
-}
-
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -289,16 +285,10 @@ Use addArtist to do the following:
 
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
-function addArtist(array, id, name, years, genre, nationality, bio){
-  array.push({id: "20",
-              name: "Adam", 
-              years: "1990", 
-              genre: "Web Design", 
-              nationality: "American", 
-              bio: "I <3 Coding"})
-  return array;
-  }
-  console.log(addArtist(artists));
+function addArtist(id, name, years, genre, nationality, bio){
+  return {id, name, years, genre, nationality, bio};
+}
+  console.log(addArtist(20, 'Adam', 1990, 'Web Design', 'American', 'I <3 coding'));
 
   
 
@@ -314,6 +304,7 @@ function lotsOfArt(artists){
   for (let i = 0; i < artists.length; i++) {
     if (artists[i][paintings > 100])
   }
+  return over100;
 }
 
 
