@@ -298,6 +298,14 @@ function addArtist(artists, object){
   return artists; 
 }
 
+// console.log(addArtist(    { 
+//   id: 20,
+//   name: 'Adam', 
+//   years: '1990' - '2021',
+//   genre: 'Web Design',
+//   nationality: 'American',
+//   bio: 'I am typing to take up some space, don't read too deeply into it. Actually, you can probably just move along now',
+// }));
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
